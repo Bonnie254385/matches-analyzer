@@ -1,0 +1,67 @@
+.probability-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.digit-box {
+  background: #475569;
+  border: 2px solid #64748b;
+  border-radius: 8px;
+  padding: 12px 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.digit-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.digit-box.low {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  border-color: #3b82f6;
+}
+
+.digit-box.medium {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  border-color: #8b5cf6;
+}
+
+.digit-box.high {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  border-color: #f87171;
+}
+
+.digit {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.percentage {
+  font-size: 12px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+@media (max-width: 480px) {
+  .probability-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .digit-box {
+    padding: 8px 4px;
+  }
+
+  .digit {
+    font-size: 18px;
+  }
+
+  .percentage {
+    font-size: 10px;
+  }
+}
